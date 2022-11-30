@@ -1,14 +1,24 @@
-<style>
+
     @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+    :root {
+        --azul-dnc: #0c07f2;
+        --preto-dnc: #303030;
+        --cinza-dnc: #c9c9c9;
+        --fonte-padrao: "inter";
+    }   
+
+
     body {
         margin: 0px; /*Margem externa*/
         padding: 0px; /*Margem interna*/
+        background:linear-gradient(180deg, rgba(12, 112, 242, 0.5) 19.91%, rgba(12, 112, 242, 0) 24.84%), #303030;
+        background-repeat:no-repeat ;
     }
     #principal {
         width: 100%;
         height: 80px;
         border:1px solid black;
-        background-color: #303030;
+        background-color: var(--preto-dnc);
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -26,7 +36,7 @@
        font-weight:600px;
        color: white ;
        text-decoration: none;
-       font-family: inter;
+       font-family: var(--fonte-padrao);
     }
         #principal div a:hover {
             color:#cccccc;
@@ -37,14 +47,107 @@
         border: 0px;
         height: 40px;
         width: 80px;
-        font-family: inter;
+        font-family:var(--fonte-padrao);
         font-size: 20px;
         font-weight: 600px;
         color: white;
         box-shadow: 3px 2px 4px rgba(12, 112, 242, 0.25);
         cursor: pointer;
+    }
+    
+    /*seção principal do site*/
 
+    section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+    
+    header {
+        color: white;
+        font-family: var(--fonte-padrao);
+    }
+    header h1 {
+        font-size: 60px;
+        font-weight: 800;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    header h2 {
+        text-align: center;
+        font-size: 30px;
+        font-weight: 500;
+        margin-bottom: 80px;
+    }
+
+    header .invert {
+        background-color: black;
+        font-weight: bold;
+        padding: 1px 5px 1px 5px;
+    }
+
+    /*Formulario*/
+
+    form {
+        color: white;
+        font-family: var(--fonte-padrao);
+        font-weight: 600;
+        width: 400px;
+    }
+
+    .formgroup {
+        display: flex;
+        flex-direction: column;
+        font-size: 20px;
+        font-weight: 400;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+   
+    form input {
+        border-radius: 10px;
+        border: none;
+        height: 30px;
+        font-size: 15px;
+        padding-left: 10px;
+        background-color: rgba(255, 255 255 0.9);
+    }
+
+    form label {
+        margin-top: 7px;
+        margin-bottom: 7px;
+    }
+
+    form input::placeholder {
+        color: rgba(57, 57, 57, 0.5)
+    }
+
+    .checkBoxItens{
+        align-items: center;
+        font-size: 15px;
+        display: flex;
+        justify-content:space-around;    
+    }
+
+    input[type="checkbox"]{
+        transform: scale(1.3)
+    }
+
+    input[type="submit"]{
+        background-color: rgba(12, 112, 242, 0.9);
+        width: 100%;
+        height: 35px;
+        font-size: 20px;
+        color:white;
+        margin-top: 40px;
+        box-shadow: 0px 6px 4px rgba(12, 112, 242, 0.25);
+        cursor: pointer;
 
 
     }
-</style>
+    
